@@ -6,7 +6,6 @@ extern int dim2;
 extern int dim3;
 extern int lstcnt;
 
-void Testloop(void);
 void init_zerocross(void); 
 void init_timer(int);
 

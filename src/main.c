@@ -17,7 +17,7 @@
 #include "esp_log.h"
 #include "nvs_flash.h"
 #include "C:\Users\Peter\Documents\credentials\credentials.h"
-//#include "dim.h"
+#include "dim.h"
 
 #include "lwip/err.h"
 #include "lwip/sys.h"
@@ -96,7 +96,7 @@ void app_main()
       ESP_ERROR_CHECK(nvs_flash_erase());
       ret = nvs_flash_init();
     }
-    //init_zerocross();  // set up zero cross detection
+    init_zerocross();  // set up zero cross detection
     //init_timer(1000);  // start timer in 50Hz mode
     //vTaskDelay(100 / portTICK_PERIOD_MS);  // give system some time for measuring
     //init_timer(lstcnt);  // auto detect 50 or 60 hz. Correct for 60Hz if needed
@@ -104,7 +104,7 @@ void app_main()
 
     ESP_ERROR_CHECK(ret);
     ESP_LOGI(TAG, "ESP_WIFI_MODE_STA");
-    wifi_init_sta();
+    //wifi_init_sta();
     ESP_LOGI(TAG, "Done!!!");
-    //Testloop();
+
 }
